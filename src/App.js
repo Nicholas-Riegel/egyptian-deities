@@ -50,8 +50,8 @@ export default function App() {
 	return (
 		<div>
 			<header>
-				<h1>Memory Game</h1>
-				<h3>Try to click on each image only once!</h3>
+				<h1>Learn the Egyptian gods</h1>
+				<h3>Click on an image to learn about the god</h3>
 			</header>
 			<main>
 				<Sidebar
