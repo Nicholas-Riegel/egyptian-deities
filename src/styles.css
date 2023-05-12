@@ -5,12 +5,6 @@
     /* border: dotted black 1px; */
 }
 
-#root{
-    /* border: green solid 3px; */
-    /* width: 100%; */
-    /* height: 100vh; */
-}
-
 body{
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -19,21 +13,22 @@ body{
 }
 
 main {
-    /* border: rgb(230, 116, 230) solid 5px; */
     display: flex;
     height: 100%;
+    /* border: rgb(230, 116, 230) solid 5px; */
 }
 
-img {
-    /* height: 90%; */
+a{
+    color: white;
 }
-
 .sidebar{
+    display: flex;
+    flex-direction: column;
     width: 25%;
-    /* border: green solid 5px; */
     padding: 2%;
     color: whitesmoke;
     background-color: rgb(62, 94, 175);
+    /* border: green solid 5px; */
 }
 
 .sidebar button{
@@ -45,8 +40,8 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     width: 75%;
-    /* border: blue solid 5px; */
     background-color: rgb(108, 112, 228);
+    /* border: blue solid 5px; */
 }
 
 .single_pic_div{
@@ -55,11 +50,10 @@ img {
     align-items: center;
     width: 20%;
     height: 30%;
-    /* border: red solid 1px; */
     margin: 10px;
-    /* border: 1px solid rgb(187, 187, 187); */
     border-radius: 7px;
     background-color: white;
+    /* border: red solid 1px; */
 } 
 
 .single_pic_div:hover{
