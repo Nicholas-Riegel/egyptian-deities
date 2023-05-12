@@ -1,0 +1,88 @@
+const GodList = [
+    {
+        id: 1,
+        url: './pictures/Amun.jpg',
+        name: 'Amun',
+        description: "One of the gods of the sun, Amun was later 'fused' with the other sun-god Ra to make Amun-Ra. What do you think those things are on his head?",
+        clicked: false,
+    },
+    {
+        id: 2,
+        url: './pictures/Anubis.jpg',
+        name: 'Anubis',
+        description: "The son of Set, Anubis was loved for taking care of people when they died. He helped Osiris come back to life!",
+        clicked: false,
+    },
+    {
+        id: 3,
+        url: './pictures/Bast.jpg',
+        name: 'Bast',
+        description: 'Bast was the goddess of cats. Cats were very important animals in Ancient Egypt, and still are!',
+        clicked: false,
+    },
+    {
+        id: 4,
+        url: './pictures/Hathor.jpg',
+        name: 'Hathor',
+        description: 'Hathor was the goddess of motherhood and babies.',
+        clicked: false,
+    },
+    {
+        id: 5,
+        url: './pictures/Horus.jpg',
+        name: 'Horus',
+        description: "Horus is the son of Osiris and Isis. He avenged his father's death by defeating and driving Set away.",
+        clicked: false,
+    },
+    {
+        id: 6,
+        url: './pictures/Isis.jpg',
+        name: 'Isis',
+        description: 'Isis was the daughter of Geb (Earth) and Nut (Sky) and wife of Osiris. She knew a lot of magic, and used it to help Osiris come back to life after he was killed by his brother Set.',
+        clicked: false,
+    },
+    {
+        id: 7,
+        url: './pictures/Nephthys.jpg',
+        name: 'Nephthys',
+        description: 'Nephthys was the daughter of Geb (Earth) and Nut (Sky) and wife of Set. She was the goddess of rivers. Can you see the river reed in her hand?',
+        clicked: false,
+    },
+    {
+        id: 8,
+        url: './pictures/Osiris.jpg',
+        name: 'Osiris',
+        description: "Osiris was the son of Geb (Earth) and Nut (Sky). He was killed by his brother Set. But he came back to life with the help of his wife Isis and Set's son Anubis. But he was only half alive afterwards. Why do you think he's green?",
+        clicked: false,
+    },
+    {
+        id: 9,
+        url: './pictures/Ra.jpg',
+        name: 'Ra',
+        description: 'Ra (Atum, Atum-Ra) was god of the sun. As Atum, he was the first god. His children, Shu and Tefnut mated to create Geb (Earth) and Nut (Sky), who in turn mated to create Osiris, Isus, Set, Nephthys and Horus the Elder. Atum-Ra sailed across the sky in a boat each day and then made a passage through the underworld each night. Can you see the Sun on his head?',
+        clicked: false,
+    },
+    {
+        id: 10,
+        url: './pictures/Set.jpg',
+        name: 'Set',
+        description: 'Set is the god of war, chaos and storms. He was brother of Osiris and killed him. But Set also protected Ra during his nightly journey through the underworld, and he was worshipped as being a valuable part of the universe.',
+        clicked: false,
+    },
+    {
+        id: 11,
+        url: './pictures/Sobek.jpg',
+        name: 'Sobek',
+        description: 'Sobek was god of crocodiles and war. And boy does he look the part!',
+        clicked: false,
+    },
+    {
+        id: 12,
+        url: './pictures/Thoth.jpg',
+        name: 'Thoth',
+        description: 'Thoth was the god of wisdom. He invented writing! Can you see the pencil and paper in his hand?',
+        clicked: false,
+    },
+]
+
+export default GodList;

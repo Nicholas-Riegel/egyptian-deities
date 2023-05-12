@@ -1,13 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 
-import PicList from './PicList'
+import GodList from './Assets'
 import Main from './Main'
 import Sidebar from './Sidebar'
 
 export default function App() {
-	const [piclist, setPiclist] = useState(PicList)
-	const [score, setScore] = useState(0)
-	const [highScore, setHighScore] = useState(0)
+
+	const [godlist, setGodlist] = useState(GodList)
 
 	const shuffle = (x) => {
 		let piclistA = [...x]
@@ -16,55 +15,37 @@ export default function App() {
 			let i = Math.floor(Math.random() * piclistA.length)
 			piclistB.push(...piclistA.splice(i, 1))
 		}
-		setPiclist(piclistB)
+		piclistB = piclistB.map(x => ({...x, clicked: false}))
+		setGodlist(piclistB)
 	}
-
-	useEffect(() => {
-		shuffle(piclist)
-		if (score > highScore) {
-			setHighScore(highScore + 1)
-		}
-		// eslint-disable-next-line
-	}, [score])
 
 	const handleClick = (e) => {
-		if (piclist.find(x => x.id === parseInt(e.target.id)).clicked === false) {
-			const newPiclist = piclist.map(
-					x => x.id === parseInt(e.target.id) ?
-					{ ...x, clicked: true } :
-					x
-				)
-			setPiclist(newPiclist)
-			setScore(score + 1)
+		if (godlist.find(x => x.id === parseInt(e.target.id)).clicked === false) {
+			const newPiclist = godlist.map(x => x.id === parseInt(e.target.id) ? { ...x, clicked: true } : { ...x, clicked: false } )
+			setGodlist(newPiclist)
 		} else {
-			setScore(0)
-			setPiclist(PicList)
+			const newPiclist = godlist.map(x => x.id === parseInt(e.target.id) ? { ...x, clicked: false } : x )
+			setGodlist(newPiclist)
 		}
-	}
-
-	const reset = () => {
-		setScore(0)
-		setHighScore(0)
 	}
 
 	return (
-		<div>
-			<header>
-				<h1>Learn the Egyptian gods</h1>
-				<h3>Click on an image to learn about the god</h3>
-			</header>
+		<div style={{ 
+			display: 'flex', 
+			flexDirection:'column', 
+			height: '100%', 
+			//border: 'solid 3px black'
+			}}>
 			<main>
 				<Sidebar
-					score={score}
-					highScore={highScore}
-					reset={reset}
-					setHighScore={setHighScore}
+					shuffle={shuffle}
+					godlist={godlist}
 				/>
 				<Main
-					piclist={piclist}
+					godlist={godlist}
 					handleClick={handleClick}
 				/>
 			</main>
-    	</div>
-  	)
+		</div>
+	)
 }
